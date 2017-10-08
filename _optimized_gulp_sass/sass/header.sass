@@ -1,0 +1,260 @@
+@import "bourbon"
+@import "vars.sass"
+
+$main-color: #F39F18
+$headers-color: #2c3949
+
+body
+	font-size: 15px
+	min-width: 320px
+	position: relative
+	line-height: em(22px)
+	font-family: "RalewayRegular", sans-serif
+	overflow-x: hidden
+	color: #333
+
+.hidden
+	display: none
+
+a, a:hover, a:focus, a:active
+	 color: $main-color
+	 text-decoration: underline
+
+.headers
+	font-family: "PFCentroSlabProMedium", $helvetica
+	text-transform: uppercase
+	font-weight: normal
+	color: $headers-color
+
+.main-color
+	color: $main-color
+	font-size: em(20px)
+
+h1, h2, h3, h4, h5, h6
+	@extend .headers
+
+h1
+	font-size: em(28px)
+	line-height: 30px
+
+h2
+	font-size: em(26px)
+
+h3
+	font-size: em(20px)
+
+b, strong
+	font-family: "RelewayBold", $helvetica
+
+.before
+	content: ''
+	width: 100%
+	height: 100%
+	position: absolute
+	left: 0
+	top: 0
+
+.ulmnu
+	list-style-type: none
+	margin: 0
+	padding: 0
+	li
+		display: inline-block
+
+.main-head
+	min-height: 820px
+	background-size: cover
+	background-position: center
+	position: relative
+	padding-bottom: 100px
+	&::before
+		@extend .before
+		background-color: #394b5f
+		opacity: .85
+	h1
+		text-transform: none
+
+.top-line
+	padding-top: 45px
+	min-height: 160px
+	background-image: url(../img/top_gradient.png)
+	background-repeat: repeat-x
+
+.logo
+	opacity: .80
+	img
+		width: 170px
+
+.main-mnu
+	font-size: em(17px)
+	li
+		line-height: 48px
+		padding: 0 5px
+		&.active
+			a
+				color: $main-color
+				text-decoration: underline
+		a:hover
+			color: $main-color
+			text-decoration: underline
+	ul
+		@extend .ulmnu
+	a
+		text-decoration: none
+		color: #fff
+
+.sm-menu
+	position: relative
+	.toggle-mnu
+		display: block
+		float: right
+		position: absolute
+		right: 0
+		top: 0
+		text-align: center
+		line-height: 48px
+
+/* Important styles */
+.toggle-mnu 
+	display: block
+	width: 28px
+	height: 30px
+	margin: 35px auto 0
+
+
+.toggle-mnu span:after,
+.toggle-mnu span:before 
+	content: ""
+	position: absolute
+	left: 0
+	top: -9px
+
+.toggle-mnu span:after
+	top: 9px
+
+.toggle-mnu span 
+	position: relative
+	display: block
+
+
+.toggle-mnu span,
+.toggle-mnu span:after,
+.toggle-mnu span:before
+	width: 100%
+	height: 3px
+	background-color: #fff
+	transition: all 0.3s
+	backface-visibility: hidden
+	border-radius: 2px
+
+.toggle-mnu.on span 
+	background-color: transparent
+
+.toggle-mnu.on span:before 
+	transform: rotate(45deg) translate(5px, 5px)
+
+.toggle-mnu.on span:after 
+	transform: rotate(-45deg) translate(7px, -8px)
+
+.toggle-mnu.on + #menu 
+	opacity: 1
+	visibility: visible
+
+.header-wrap
+	margin-top: 40px
+	h1
+		color: #fff
+		border-bottom: $main-color 8px solid
+		display: inline-block
+	h3
+		color: #ccc
+		margin-top: 120px
+
+.header-left
+	margin-bottom: 50px
+
+.forms
+	background-color: transparentize(#243343, .2)
+	padding: 35px 35px 28px
+	color: #97a4b2
+	font-size: em(14px)
+	min-width: 295px
+	max-width: 350px
+	border-bottom: #1A222B 3px solid
+	float: right
+	h4
+		color: #fff
+		font-family: "PFCentroSlabProMedium", $helvetica
+		font-size: em(34px)
+		text-transform: none
+		margin: 0
+	p
+		line-height: em(22px)
+		margin-top: 20px
+	label
+		display: block
+		margin: 10px 0
+		span
+			letter-spacing: 1.3px
+			/* display: block */
+			margin-bottom: 5px
+	input, select
+		// display: block
+		border: none
+		box-shadow: 0 -3px #1F2A36
+		background-color: #34465A
+		font-family: "PFCentroSlabProMedium", $helvetica
+		font-size: em(18px)
+
+	input
+		width: 100%
+		padding: 5px 0
+		margin-top: 5px
+		text-indent: 10px
+		transition: all .5s ease
+		&:focus
+			box-shadow: 0 -5px #1F2A36
+			background-color: #394E65
+	select
+		width: 35%
+		float: right
+		color: #fff
+		&:focus
+			background-color: #394E65
+	.buttons
+		margin-top: 10px
+
+.button-wrap
+	text-align: center
+
+.buttons
+	display: inline-block
+	border: none
+	background-color: $main-color
+	color: #111
+	font-family: "PFCentroSlabProBold", $helvetica
+	font-size: em(22px)
+	padding: 12px 30px
+	border-bottom: #B97200 3px solid
+	transition: all .5s ease
+	&:hover
+		background-color: #FFB338
+		&:active
+			background-color: #DB8C0E
+
+.arrow-wrap
+	@extend .button-wrap
+	position: relative
+	z-index: 2
+	top: 40px
+
+.arrow-down
+	display: inline-block
+	width: 40px
+	height: 40px
+	background-image: url(../img/arrow_down.png)
+	cursor: pointer
+	opacity: .7
+	transition: all .5s ease
+	&:hover
+		opacity: 1
