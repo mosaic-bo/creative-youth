@@ -1,5 +1,6 @@
 @import "bourbon"
-@import "vars.sass"
+// @import "vars.sass"
+@import "_var.sass"
 
 //Load Libs SASS
 @import "app/libs/animate/animate.sass"
@@ -27,7 +28,41 @@ body input:required:valid,
 body textarea:required:valid
 	color: #fff
 
-//Custom Styles Here
+.homesect
+	padding-top: 70px
+	background-color: #F9F9F9
+	position: relative
+	.section-head
+		margin-bottom: 80px
+		p
+			margin-top: 60px
+		h2
+			text-align: center
+			position: relative
+			&::after
+				position: absolute
+				content: ''
+				height: 4px
+				background-color: $main-color
+				width: 165px
+				display: block
+				bottom: -30px
+				left: 50%
+				transform: translate(-50%, 0)
+
+	.section-bottom
+		margin-top: 70px
+		background-color: #E5E5E5
+		padding: 50px 0
+		text-align: center
+	
+	&::before
+		content: ''
+		height: 6px
+		width: 100%
+		position: absolute
+		top: -6px
+		background-image: url("../img/bah_1.png")
 
 
 //ALWAYS END

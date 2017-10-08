@@ -1,8 +1,6 @@
 @import "bourbon"
-@import "vars.sass"
-
-$main-color: #F39F18
-$headers-color: #2c3949
+// @import "vars.sass"
+@import "_var.sass"
 
 body
 	font-size: 15px
@@ -32,10 +30,10 @@ a, a:hover, a:focus, a:active
 
 h1, h2, h3, h4, h5, h6
 	@extend .headers
+	line-height: em(22px)
 
 h1
 	font-size: em(28px)
-	line-height: 30px
 
 h2
 	font-size: em(26px)
@@ -237,10 +235,19 @@ b, strong
 	padding: 12px 30px
 	border-bottom: #B97200 3px solid
 	transition: all .5s ease
+	text-decoration: none
+	color: #111
 	&:hover
 		background-color: #FFB338
-		&:active
-			background-color: #DB8C0E
+		text-decoration: none
+		color: #111
+	&:active
+		background-color: #DB8C0E
+		text-decoration: none
+		color: #111
+	&:focus
+		text-decoration: none
+		color: #111
 
 .arrow-wrap
 	@extend .button-wrap
