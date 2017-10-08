@@ -167,6 +167,27 @@ b, strong
 	h3
 		color: #ccc
 		margin-top: 120px
+	ul
+		@extend .ulmnu
+		margin-top: 20px
+		li
+			font-family: "RalewaySemiBold", $helvetica
+			font-size: em(16px)
+			padding: 10px 28px
+			color: #fff
+			position: relative
+			padding-left: 28px
+			&::before
+				content: ''
+				display: block
+				width: 6px
+				height: 11px
+				+triangle(12px, $main-color, right)
+				position: absolute
+				top: 40%
+				left: 0
+			&:hover
+				text-decoration: underline
 
 .header-left
 	margin-bottom: 50px
