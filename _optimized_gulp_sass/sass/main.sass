@@ -71,6 +71,7 @@ body textarea:required:valid
 
 .section-content
 	min-height: 295px
+	margin-bottom: 30px
 
 /* Бухгалтерские услуги */
 
@@ -85,6 +86,29 @@ body textarea:required:valid
 			color: #F5F5F5
 /* /Бухгалтерские услуги */
 
+/* Slider */
+.slider
+	.slide
+		.day
+			background-color: $main-color
+		h4
+			font-size: em(24px)
+			text-align: center
+			margin: 0
+		p
+			text-align: center
+			margin: 0
+			// font-size: em(20px)
+		.base_item
+			font-weight: bold
+		.section_grey
+			background-color: #e5e5e5
+			&:hover
+				background-color: #ccc
+		.section_light
+			&:hover
+				background-color: #ccc
+/* /Slider */
 .main-footer
 	padding-bottom: 60px
 	.logo
@@ -100,7 +124,6 @@ body textarea:required:valid
 	background-repeat: no-repeat
 	background-position: center
 	cursor: pointer
-	 
 
 //ALWAYS END
 @import "media"

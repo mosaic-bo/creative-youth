@@ -60,12 +60,11 @@ $headers = "MIME-Version: 1.0" . PHP_EOL .
 mail($admin_email, adopt($form_subject), $message, $headers );
 */
 
-$frm_name  = "Katerina";
+$frm_name  = trim($_POST["name"]);
 $recepient = "katerinabormotova@mail.ru";
-$sitename  = "Творческая молодежь";
+$sitename  = "Творческая молодежь-2017";
 $subject   = "Новая заявка с сайта \"$sitename\"";
 
-$name = trim($_POST["name"]);
 $place = trim($_POST["place"]);
 $phone = trim($_POST["phone"]);
 $email = trim($_POST["email"]);
@@ -74,14 +73,14 @@ $view = trim($_POST["view"]);
 $status = trim($_POST["status"]);
 
 $message = "
-Форма: $formname <br>
-Имя: $name <br>
-Город, организация, должность: $place
-Телефон: $phone
-E-mail: $email
-Название доклада/сообщения: $title
-Доклад или сообщение? $view
-Форма представления: $status
+Поступила заявка на участие в конференции<br>
+Имя: <b>$frm_name</b> <br>
+Город, организация, должность: <b>$place</b> <br>
+Телефон: <b>$phone</b> <br>
+E-mail: <b>$email</b> <br>
+Название доклада/сообщения: <b>$title</b> <br>
+Доклад или сообщение? <b>$view</b> <br>
+Форма представления: <b>$status</b> <br>
 ";
 
 mail($recepient, $subject, $message, "From: $frm_name <$email>" . "\r\n" . "Reply-To: $email" . "\r\n" . "X-Mailer: PHP/" . phpversion() . "\r\n" . "Content-type: text/html; charset=\"utf-8\"");

@@ -49,7 +49,7 @@ $(document).ready(function() {
 		$.ajax({
 			type: "POST",
 			url: "/mail.php",
-			data: th.serialize()
+			data: $(this).serialize()
 		}).done(function() {
 			alert("Заявка отправлена!");
 			setTimeout(function() {
