@@ -1,6 +1,8 @@
 @import "bourbon"
 // @import "vars.sass"
 @import "_var.sass"
+@import "../app/libs/Magnific-Popup/magnific-popup.sass"
+@import "../app/libs/owl/assets/owl.carousel.sass"
 
 //Load Libs SASS
 @import "app/libs/animate/animate.sass"
@@ -101,13 +103,34 @@ body textarea:required:valid
 			// font-size: em(20px)
 		.base_item
 			font-weight: bold
-		.section_grey
-			background-color: #e5e5e5
-			&:hover
-				background-color: #ccc
-		.section_light
-			&:hover
-				background-color: #ccc
+	table
+		overflow: hidden
+		border: 1px solid #d3d3d3
+		background: #fefefe
+		width: 100%
+		margin: 5% auto
+		/* FF1+ */
+		-moz-border-radius: 5px
+		/* Saf3-4 */
+		-webkit-border-radius: 5px
+		border-radius: 15px
+		-moz-box-shadow: 4px rgba(0, 0, 0, 0.2)
+		-webkit-box-shadow: 4px rgba(0, 0, 0, 0.2)
+	th, td
+		padding: 8px 18px
+	th
+		padding-top: 22px
+		text-shadow: 1px 1px 1px #fff
+		background: #e8eaeb
+	td
+		border-top: 1px solid #e0e0e0
+		border-right: 1px solid #e0e0e0
+		width: 5%
+	.owl-dot
+		width: 10px
+		height: 10px
+		background-color: #D6D6D6
+		
 /* /Slider */
 .main-footer
 	padding-bottom: 60px

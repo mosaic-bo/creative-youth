@@ -36,6 +36,11 @@ $(document).ready(function() {
         return false;
     });
 
+    // Carousel
+    $(".slider").owlCarousel( {
+    	items: 1
+    });
+
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {
