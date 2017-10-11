@@ -41,7 +41,8 @@ $(document).ready(function() {
     	items : 1,
     	nav : true,
     	navText : "",
-    	loop : true
+    	loop : true,
+    	autoHeight: true
     });
 
 	//SVG Fallback

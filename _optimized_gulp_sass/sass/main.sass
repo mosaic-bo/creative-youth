@@ -88,8 +88,36 @@ body textarea:required:valid
 			color: #F5F5F5
 /* /Бухгалтерские услуги */
 
+.s_gray
+	background-color: #E5E5E5
+	&::before
+		background-image: url("../img/bah_3.png")
+
+.section_3
+	.section-head
+		margin-bottom: 20px
 /* Slider */
 .slider
+	padding-bottom: 20px
+	.owl-item
+		.day
+			transition: all .5s ease
+			opacity: 0
+			transform: translate3d(200px, 0, 0)
+			transition-delay: 0.1s
+			border-radius: 5px
+		table
+			transition: all .3s ease
+			opacity: 0
+			transform: translate3d(200px, 0, 0)
+			transition-delay: 0.3s
+		&.active
+			.day
+				opacity: 1
+				transform: translate3d(0, 0, 0)
+			table
+				opacity: 1
+				transform: translate3d(0, 0, 0)
 	.owl-controls
 			text-align: center
 			.owl-dot
@@ -103,16 +131,20 @@ body textarea:required:valid
 						background-color: $main-color
 			.owl-nav
 				position: absolute
-				top: 30%
+				top: 20%
 				width: 100%
 				> div
 					height: 29px
 					width: 16px
 					background-image: url("../img/slider_arrows.png")
 					position: absolute
-					left: 20px
+					left: 10px
+					opacity: .5
+					transition: all .25s ease
+					&:hover
+						opacity: 1
 				.owl-next
-					right: 20px
+					right: 10px
 					left: auto
 					background-position: -16px 0
 	.slide
@@ -130,8 +162,9 @@ body textarea:required:valid
 		.base_item
 			font-weight: bold
 	table
+		padding: 0
 		overflow: hidden
-		border: 1px solid #d3d3d3
+		border: 1px solid #D3D3D3
 		background: #fefefe
 		width: 100%
 		margin: 5% auto
