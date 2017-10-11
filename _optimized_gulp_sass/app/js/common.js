@@ -38,7 +38,10 @@ $(document).ready(function() {
 
     // Carousel
     $(".slider").owlCarousel( {
-    	items: 1
+    	items : 1,
+    	nav : true,
+    	navText : "",
+    	loop : true
     });
 
 	//SVG Fallback

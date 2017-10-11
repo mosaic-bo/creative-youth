@@ -90,15 +90,33 @@ body textarea:required:valid
 
 /* Slider */
 .slider
-	.slide
-		.owl-controls
+	.owl-controls
 			text-align: center
 			.owl-dot
-					width: 1005px
+					width: 15px
 					height: 15px
-					margin: 0 2px
+					margin: 0 3px
 					background-color: #D6D6D6
 					display: inline-block
+					border-radius: 10em
+					&.active
+						background-color: $main-color
+			.owl-nav
+				position: absolute
+				top: 30%
+				width: 100%
+				> div
+					height: 29px
+					width: 16px
+					background-image: url("../img/slider_arrows.png")
+					position: absolute
+					left: 20px
+				.owl-next
+					right: 20px
+					left: auto
+					background-position: -16px 0
+	.slide
+		position: relative
 		.day
 			background-color: $main-color
 		h4
