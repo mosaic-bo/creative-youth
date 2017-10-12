@@ -36,13 +36,30 @@ $(document).ready(function() {
         return false;
     });
 
+	// Blocks
+	$(".section_3").waypoint(function() {
+
+		$(".section_3 .card").each(function(index) {
+			var ths = $(this);
+			setInterval(function() {
+				ths.removeClass("card-off").addClass("card-on");
+			}, 150*index);
+		});
+		
+	}, {
+		offset : "10%"
+	});
+
     // Carousel
-    $(".slider").owlCarousel( {
+	$(".slider").owlCarousel( {
     	items : 1,
     	nav : true,
     	navText : "",
     	loop : true,
-    	autoHeight: true
+    	autoHeight : true,
+    	autoplay : true,
+    	autoplayTimeout : 3000, 
+    	autoplayHoverPause : true
     });
 
 	//SVG Fallback

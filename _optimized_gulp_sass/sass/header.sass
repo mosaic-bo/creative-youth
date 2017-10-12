@@ -24,10 +24,6 @@ a, a:hover, a:focus, a:active
 	font-weight: normal
 	color: $headers-color
 
-.main-color
-	color: $main-color
-	font-size: em(20px)
-
 h1, h2, h3, h4, h5, h6
 	@extend .headers
 	line-height: em(22px)
@@ -207,14 +203,16 @@ b, strong
 		text-transform: none
 		margin: 0
 	p
+		font-size: em(20px)
 		line-height: em(22px)
 		margin-top: 20px
+		span
+			color: $main-color
 	label
 		display: block
 		margin: 10px 0
 		span
 			letter-spacing: 1.3px
-			/* display: block */
 			margin-bottom: 5px
 	input, select
 		// display: block
