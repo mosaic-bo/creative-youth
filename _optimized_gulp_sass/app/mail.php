@@ -65,12 +65,12 @@ $recepient = "katerinabormotova@mail.ru";
 $sitename  = "Творческая молодежь-2017";
 $subject   = "Новая заявка с сайта \"$sitename\"";
 
-$place = trim(htmlspecialchars($_POST["place"]));
-$phone = trim(htmlspecialchars($_POST["phone"]));
-$email = trim(htmlspecialchars($_POST["email"]));
-$title = trim(htmlspecialchars($_POST["title"]));
-$view = trim(htmlspecialchars($_POST["view"]));
-$status = trim(htmlspecialchars($_POST["status"]));
+$place = trim($_POST["place"]);
+$phone = trim($_POST["phone"]);
+$email = trim($_POST["email"]);
+$title = trim($_POST["title"]);
+$view = trim($_POST["view"]);
+$status = trim($_POST["status"]);
 
 $message = "
 Поступила заявка на участие в конференции<br>

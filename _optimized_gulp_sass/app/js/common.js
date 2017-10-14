@@ -5,12 +5,6 @@ $(document).ready(function() {
 		$(".main-mnu").slideToggle();
 	});
 
-	// Animate down menu
-	$(".main-footer .toggle-mnu").click(function() {
-		$("html, body").animate({ scrollTop: $(document).height() }, "slow");
-		return false;
-	});
-
 	// Animate Top in footer
 	$(".top").click(function() {
 		$("html, body").animate({ scrollTop: 0 }, "slow");
@@ -21,6 +15,18 @@ $(document).ready(function() {
 	$(".arrow-down").click(function() {
 		$("html, body").animate({ scrollTop: $(".main-head").height()+100 }, "slow");
 		return false;
+	});
+
+	// Animate ads
+	$(".section_1").waypoint(function() {
+		$(".section_1 .ad").each(function(index) {
+			var ths = $(this);
+			setInterval(function() {
+				ths.addClass("on");
+			}, 200*index);
+		});
+	}, {
+		offset : "30%"
 	});
 
 	// Animate Section Head
@@ -50,7 +56,7 @@ $(document).ready(function() {
 		});
 		
 	}, {
-		offset : "10%"
+		offset : "30%"
 	});
 
     // Carousel
@@ -64,6 +70,8 @@ $(document).ready(function() {
     	autoplayTimeout : 3000, 
     	autoplayHoverPause : true
     });
+
+    $(".slider .slide .day").animated("rollIn");
 
 	//SVG Fallback
 	if(!Modernizr.svg) {

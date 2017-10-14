@@ -75,6 +75,7 @@ body textarea:required:valid
 .section_1
 	.section-bottom
 		background-color: $dark-color
+
 .section_2
 	.section-content
 			background-image: url("../img/s2_gray_bg.png")
@@ -208,6 +209,22 @@ body textarea:required:valid
 				vertical-align: middle
 .section-pb
 		padding-bottom: 70px
+
+.ads
+	@extend .cards
+	.ad
+		@extend .card
+		opacity: 0
+		transition: all .5s ease
+		transform: translateY(-30px)
+		&.on
+			opacity: 1
+			transform: translateY(0)
+		background-color: #E5E5E5
+		border-bottom: #D6D6D6 5px solid
+		border-top: #D6D6D6 7px solid
+		min-height: 365px
+		color: $dark-color
 
 .section_4
 	.section-head
