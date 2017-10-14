@@ -40,6 +40,7 @@ body textarea:required:valid
 	.section-head
 		margin-bottom: 50px
 		p
+			text-align: center
 			margin-top: 60px
 			animation-delay: .4s
 			a
@@ -71,14 +72,87 @@ body textarea:required:valid
 		top: -6px
 		background-image: url("../img/bah_1.png")
 
-.section-content
-	min-height: 295px
-	margin-bottom: 30px
+.section_1
+	.section-bottom
+		background-color: $dark-color
+.section_2
+	.section-content
+			background-image: url("../img/s2_gray_bg.png")
+			background-repeat: no-repeat
+			background-position: top
 
-/* Бухгалтерские услуги */
+.section-content
+	position: relative
+	padding-bottom: 90px
+
+	.s2-bottom-triangle
+		height: 90px
+		position: absolute
+		bottom: 0
+		background-image: url("../img/s2_triangle.svg")
+		z-index: 2
+		width: 100%
+		background-position: top
+		background-size: 100% 100%
+		text-align: center
+		padding-top: 60px
+		.wrap-title
+			width: 45%
+			position: absolute
+			top: 30px
+			left: 50%
+			transform: translate(-50%, 0)
+			z-index: -1
+			h4
+				color: $main-color
+				font-size: em(18px)
+				text-transform: none
+				line-height: em(18px)
+
+.info-item
+	padding-left: 34px
+	max-width: 264px
+	line-height: em(19px)
+	margin: 100px 0
+	text-align: center
+
+	h4
+		color: $main-color
+		font-size: em(24px)
+		text-transform: none
+		line-height: em(14px)
+		margin-top: 0
+		margin-bottom: 10px
+	p
+		font-size: em(16px)
+		border-bottom: #D6DAE0 1px solid
+		padding-bottom: 20px
+
+.info-item-wrap:nth-child(2)
+	.info-item
+		margin-top: 0 
+.scales
+	width: 160px
+	position: absolute
+	top: -118px
+	left: 50%
+	transform: translate(-50%, 0)
+	z-index: -1
+
+.s2-bottom
+	padding: 45px 0 65px
+	background-color: #394B5F
+	.info-item
+		margin: 10px 0 0
+		p
+			color: #FFF
+			border-color: #546476
+	.info-item-wrap:nth-child(2)
+		.info-item
+			margin-top: 80px
 
 .s_dark
-	background-color: #2C3949
+	background-color: $dark-color
 	&:before
 		background-image: url(../img/bah_2.png)
 	.section-head
@@ -86,7 +160,6 @@ body textarea:required:valid
 			color: #FFF
 		p
 			color: #F5F5F5
-/* /Бухгалтерские услуги */
 
 .s_gray
 	background-color: #E5E5E5
@@ -108,8 +181,8 @@ body textarea:required:valid
 		min-height: 530px
 		transition: all 1.2s ease
 		display: inline-block
-		background-color: #2C3949
-		margin: 0 12px
+		background-color: $dark-color
+		margin: 5px 12px
 		color: #97A4B2
 		font-size: em(15px)
 		line-height: em(22px)
@@ -235,8 +308,8 @@ body textarea:required:valid
 	padding-bottom: 60px
 	.logo
 		opacity: .35
-	.main-mnu
-		a
+	.footer-info
+		p
 			color: #C7C9CC
 
 .top

@@ -26,6 +26,9 @@ $(document).ready(function() {
 	// Animate Section Head
 	$(".section-head p, .section-head h2").animated("fadeInRight");
 
+	// Animate items
+	$(".info-item-wrap").animated("zoomIn");
+
 	// Smooth scrolling menu
 	$("a[href*=#]").on("click", function(e){
         var anchor = $(this);
