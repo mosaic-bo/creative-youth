@@ -7,22 +7,6 @@
 //Load Libs SASS
 @import "app/libs/animate/animate.sass"
 
-*::-webkit-input-placeholder
-	color: #FFF
-	opacity: 1
-
-*:-moz-placeholder
-	color: #FFF
-	opacity: 1
-
-*::-moz-placeholder
-	color: #FFF
-	opacity: 1
-
-*:-ms-input-placeholder
-	color: #fff
-	opacity: 1
-
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	color: #FFF
@@ -322,12 +306,20 @@ body textarea:required:valid
 		
 /* /Slider */
 .main-footer
-	padding-bottom: 60px
+	padding-bottom: 20px
 	.logo
 		opacity: .35
+		img
+			margin-top: -20px
 	.footer-info
-		p
+		.f-item
+			display: inline-block
 			color: #C7C9CC
+			margin-right: 20px
+			img
+				width: 30px
+				padding: 0 0px 3px
+				margin-right: 10px
 
 .top
 	height: 36px
